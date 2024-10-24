@@ -1,14 +1,28 @@
-//sever.mjs
-import { createServer } from 'node:http';
+import express from 'express';
+import contatos from './data/contatos.mjs'
+const app = express();
 
-const server = createServer((req, res) => {
-    res.writeHead(200, {'Content-Type' : 'text/plain'});
-    res.end('Hello World!\n');
+app.use(express.json());
+
+app.get('/', (req, res) => {
+    res.send('Hello World!');
 });
 
-//starts a simple http server locally on port 3000
-server.listen(3000, '127.0.0.1', () => {
-    console.log('Listening on 127.0.0.1:3000');
-})
+app.get('/contatos', (req, res) => {
+    res.status(200).json({
+        error: false,
+        contatos
+    })
+});
 
-//execute com 'node server.mjs'
+app.get('/contatos/:id', (req, res) => {
+    const id = req.params.id;
+     
+    res.status(200).json({
+        
+    })
+});
+
+app.listen(3000, () => {
+    console.log('Servidor iniciado na porta 3000');
+});
