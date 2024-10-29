@@ -14,7 +14,7 @@ RUN npm install
 COPY ../backend .
 
 # Expor a porta que a aplicação irá rodar
-EXPOSE 8080
+EXPOSE 3000
 
 # Comando para rodar a aplicação
 CMD ["node", "./backend/server.mjs"] 
