@@ -1,18 +1,19 @@
 const contatos = [
     {
-        id:1,
-        nome:'Glauberto',
-        genero: 'M',
-        telefone: '123456789',
-        email: 'glau@gmail.com'
+      id: 1,
+      nome: "Daniel",
+      genero: "M",
+      telefone: "123456789",
+      email: "daniel@ig.com"
     },
     {
-        id:2,
-        nome:'Madson',
-        genero: 'F',
-        telefone: '987654321',
-        email: 'madson@gmail.com'
+      id: 2,
+      nome: "Maria",
+      genero: "F",
+      telefone: "987654321",
+      email: "maria@bol.com"
     }
-];
-
-export default contatos;
+  ];
+  
+  export default contatos;
+  
